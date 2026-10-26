@@ -1,0 +1,8 @@
+Musik latar EcoCode Quest (gubahan asli, dibuat dengan scripts/buat_musik.py, bebas hak cipta):
+  bgm-cerah.mp3   Lagu 1   chip-pop, 144 bpm
+  bgm-malam.mp3   Lagu 2   dance, 128 bpm
+  bgm-hutan.mp3   Lagu 3   ska/petualangan, 156 bpm
+Siswa memilih sendiri lagunya (tombol "Pilih musik"); tampil hanya sebagai Lagu 1, 2, dan 3.
+Ingin memakai musik lain? Timpa berkas dengan nama yang sama (format MP3).
+Mengubah nama tampilan atau menambah lagu: edit src/lib/lagu.ts dan batasan 'musik' di supabase/01-skema.sql.
+Efek suara tidak butuh berkas: dibuat langsung oleh peramban.

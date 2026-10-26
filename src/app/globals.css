@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: var(--font-fredoka), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+  --color-ink: #14342b;
+  --color-ink-lembut: #2b4a3e;
+  --color-hijau: #187a41;
+  --color-hijau-tua: #0f5a2f;
+  --color-kuning: #f6c02b;
+  --color-kuning-tua: #c48f0a;
+  --color-merah: #d93a32;
+  --color-merah-tua: #a52a23;
+  --color-biru: #2468b5;
+  --color-oranye: #b8560a;
+  --color-ungu: #7a3fb5;
+  --color-mint: #e4f4e8;
+  --color-kertas: #f3f8f5;
+}
+
+body {
+  margin: 0;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+button { font-family: inherit; cursor: pointer; }
+button:disabled { cursor: not-allowed; opacity: 0.6; }
+
+@keyframes goyang {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+.goyang { animation: goyang 0.4s ease-in-out; }
+
+@media (prefers-reduced-motion: reduce) {
+  .goyang { animation: none; }
+}
+
+/* Cetak sertifikat (Unduh = Simpan sebagai PDF) */
+@page { size: A4 landscape; margin: 0; }
+@media print {
+  body { background: #fff !important; }
+  .tanpa-cetak { display: none !important; }
+  .area-cetak { box-shadow: none !important; margin: 0 !important; }
+}
